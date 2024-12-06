@@ -40,23 +40,27 @@ SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolow
 OBJS = $(addprefix build/,$(SRCS:.c=.o))
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@echo "Creating library $(NAME)..."
+	@ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
 build:
-	mkdir -p build
+	@mkdir -p build
 
 build/%.o: %.c | build
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) build
+	@echo "Cleaning object files..."
+	@$(RM) build
 
 fclean: clean
-	$(RM) $(NAME)
+	@echo "Removing $(NAME)..."
+	@$(RM) $(NAME)
 
 re: fclean all
 
 .PHONY: all clean fclean re
+
