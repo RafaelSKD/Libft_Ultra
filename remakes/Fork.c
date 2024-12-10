@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   Fork.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:47:19 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/11/28 11:18:27 by rafaefer         ###   ########.fr       */
+/*   Created: 2024/12/10 11:16:53 by rafaefer          #+#    #+#             */
+/*   Updated: 2024/12/10 11:38:35 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "remakes.h"
 
-int	ft_count_words(char const *s, char c)
+pid_t	fork_r(void)
 {
-	int	wordcount;
+	pid_t	pid;
 
-	wordcount = 0;
-	while (*s)
+	pid = fork();
+	if (pid < 0)
 	{
-		if (*s != c)
-		{
-			wordcount++;
-			while (*s != c && *s)
-				s++;
-		}
-		else
-			s++;
+		perror(RED"Fork FAIL"RST);
+		exit(EX_OSERR);
 	}
-	return (wordcount);
+	return (pid);
 }

@@ -18,7 +18,7 @@ NAME = libft.a
 VPATH = src:src/conversion:src/lists:src/mem:src/output:src/str:src/is:printf:get_next_line
 
 SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolower.c \
-       src/conversion/ft_toupper.c \
+       src/conversion/ft_toupper.c src/conversion/ft_atol.c \
        src/lists/ft_lstadd_back.c src/lists/ft_lstadd_front.c src/lists/ft_lstclear.c \
        src/lists/ft_lstdelone.c src/lists/ft_lstiter.c src/lists/ft_lstlast.c \
        src/lists/ft_lstmap.c src/lists/ft_lstnew.c src/lists/ft_lstsize.c \
@@ -35,7 +35,8 @@ SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolow
 	   src/str/ft_substr.c src/str/ft_count_words.c \
        printf/ft_printf.c printf/put_pointer.c printf/put_hex.c printf/ft_putstr.c \
        printf/ft_utoa.c printf/putnbr_u.c printf/ft_putchar.c printf/ft_putnbr.c \
-       get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+       get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
+       remakes/Fork.c remakes/Getcwd.c remakes/Malloc.c remakes/Realloc.c remakes/Wait.c
 
 OBJS = $(addprefix build/,$(SRCS:.c=.o))
 

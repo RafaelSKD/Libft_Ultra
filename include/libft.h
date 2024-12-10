@@ -6,7 +6,7 @@
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:13:09 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/11/28 11:17:28 by rafaefer         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:21:09 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <limits.h>
 # include <signal.h>
 # include "../printf/ft_printf.h"
+# include "../remakes/remakes.h"
 # include "../get_next_line/get_next_line.h"
 # include <sys/types.h>
 
@@ -57,6 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 int		ft_count_words(char const *s, char c);
 char	*ft_itoa(int n);
+long	ft_atol(const char *str);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);

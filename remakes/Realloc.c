@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   Realloc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:47:19 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/11/28 11:18:27 by rafaefer         ###   ########.fr       */
+/*   Created: 2024/12/10 11:16:14 by rafaefer          #+#    #+#             */
+/*   Updated: 2024/12/10 11:38:22 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "remakes.h"
 
-int	ft_count_words(char const *s, char c)
+void	*realloc_r(void *ptr, size_t size)
 {
-	int	wordcount;
+	void	*new_ptr;
 
-	wordcount = 0;
-	while (*s)
+	new_ptr = realloc(ptr, size);
+	if (!new_ptr && size != 0)
 	{
-		if (*s != c)
-		{
-			wordcount++;
-			while (*s != c && *s)
-				s++;
-		}
-		else
-			s++;
+		perror(RED"realloc FAIL"RST);
+		exit(EXIT_FAILURE);
 	}
-	return (wordcount);
+	return (new_ptr);
 }

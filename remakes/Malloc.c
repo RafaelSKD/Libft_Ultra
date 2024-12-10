@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   Malloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:47:19 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/11/28 11:18:27 by rafaefer         ###   ########.fr       */
+/*   Created: 2024/12/10 11:15:17 by rafaefer          #+#    #+#             */
+/*   Updated: 2024/12/10 11:34:47 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "remakes.h"
 
-int	ft_count_words(char const *s, char c)
+void	*malloc_r(size_t size)
 {
-	int	wordcount;
+	void	*ptr;
 
-	wordcount = 0;
-	while (*s)
+	if (size == 0)
+		return (NULL);
+	ptr = malloc(size);
+	if (!ptr)
 	{
-		if (*s != c)
-		{
-			wordcount++;
-			while (*s != c && *s)
-				s++;
-		}
-		else
-			s++;
+		perror(RED"Malloc FAIL"RST);
+		exit(EXIT_FAILURE);
 	}
-	return (wordcount);
+	return (ptr);
 }

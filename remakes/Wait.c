@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   Wait.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:47:19 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/11/28 11:18:27 by rafaefer         ###   ########.fr       */
+/*   Created: 2024/12/10 11:17:32 by rafaefer          #+#    #+#             */
+/*   Updated: 2024/12/10 11:38:14 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "remakes.h"
 
-int	ft_count_words(char const *s, char c)
+pid_t	wait_r(int	*status)
 {
-	int	wordcount;
+	pid_t	result;
 
-	wordcount = 0;
-	while (*s)
+	if (!status)
 	{
-		if (*s != c)
-		{
-			wordcount++;
-			while (*s != c && *s)
-				s++;
-		}
-		else
-			s++;
+		fprintf(stderr, RED"WAIT: status arg required\n"RST);
+		return (-1);
 	}
-	return (wordcount);
+	result = wait(status);
+	if (result == -1)
+		perror(RED"Wait FAIL"RST);
+	if (WIFEXITED(*status))
+		*status = WEXITSTATUS(*status);
+	return (result);
 }
