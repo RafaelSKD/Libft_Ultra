@@ -6,7 +6,7 @@
 #    By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 15:45:07 by rafaefer          #+#    #+#              #
-#    Updated: 2024/11/28 11:17:49 by rafaefer         ###   ########.fr        #
+#    Updated: 2024/12/12 15:10:23 by rafaefer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolow
        src/str/ft_strjoin.c src/str/ft_strlcat.c src/str/ft_strlcpy.c \
        src/str/ft_strlen.c src/str/ft_strmapi.c src/str/ft_strncmp.c \
        src/str/ft_strnstr.c src/str/ft_strrchr.c src/str/ft_strtrim.c \
-	   src/str/ft_substr.c src/str/ft_count_words.c \
+	   src/str/ft_substr.c src/str/ft_count_words.c src/str/ft_strcmp.c \
        printf/ft_printf.c printf/put_pointer.c printf/put_hex.c printf/ft_putstr.c \
        printf/ft_utoa.c printf/putnbr_u.c printf/ft_putchar.c printf/ft_putnbr.c \
        get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
