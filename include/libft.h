@@ -6,7 +6,7 @@
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:13:09 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/12/12 15:09:51 by rafaefer         ###   ########.fr       */
+/*   Updated: 2024/12/13 15:04:30 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_strcmp(char *s1, char *s2);
+int		ft_str_isdigit(const char	*str);
 
 #endif
