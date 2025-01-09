@@ -6,7 +6,7 @@
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:13:09 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/12/13 15:04:30 by rafaefer         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:29:27 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_free(char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 int		ft_count_words(char const *s, char c);

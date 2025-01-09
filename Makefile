@@ -6,7 +6,7 @@
 #    By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 15:45:07 by rafaefer          #+#    #+#              #
-#    Updated: 2024/12/13 15:06:58 by rafaefer         ###   ########.fr        #
+#    Updated: 2025/01/09 12:29:01 by rafaefer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolow
        src/output/ft_putchar_fd.c src/output/ft_putendl_fd.c src/output/ft_putnbr_fd.c \
        src/output/ft_putstr_fd.c \
        src/is/ft_isalnum.c src/is/ft_isalpha.c src/is/ft_isascii.c src/is/ft_isdigit.c \
-       src/is/ft_isprint.c src/is/ft_str_isdigit.c \
+       src/is/ft_isprint.c src/is/ft_str_isdigit.c src/str/ft_strjoin_free.c\
        src/str/ft_split.c src/str/ft_strchr.c src/str/ft_strdup.c src/str/ft_striteri.c \
        src/str/ft_strjoin.c src/str/ft_strlcat.c src/str/ft_strlcpy.c \
        src/str/ft_strlen.c src/str/ft_strmapi.c src/str/ft_strncmp.c \
