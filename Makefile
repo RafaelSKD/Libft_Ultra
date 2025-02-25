@@ -36,7 +36,8 @@ SRCS = src/conversion/ft_atoi.c src/conversion/ft_itoa.c src/conversion/ft_tolow
        printf/ft_printf.c printf/put_pointer.c printf/put_hex.c printf/ft_putstr.c \
        printf/ft_utoa.c printf/putnbr_u.c printf/ft_putchar.c printf/ft_putnbr.c \
        get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
-       remakes/Fork.c remakes/Getcwd.c remakes/Malloc.c remakes/Realloc.c remakes/Wait.c
+       remakes/Fork.c remakes/Getcwd.c remakes/Malloc.c remakes/Realloc.c remakes/Wait.c \
+       remakes/Freearray.c
 
 OBJS = $(addprefix build/,$(SRCS:.c=.o))
 

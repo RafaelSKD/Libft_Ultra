@@ -9,6 +9,7 @@ SRCS = Fork.c \
       Malloc.c \
       Realloc.c \
       Wait.c \
+      Freearray.c
 
 OBJS =  $(SRCS:.c=.o)
 

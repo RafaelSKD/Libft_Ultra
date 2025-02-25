@@ -6,7 +6,7 @@
 /*   By: rafaefer <rafaefer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:39:29 by rafaefer          #+#    #+#             */
-/*   Updated: 2024/12/10 11:43:08 by rafaefer         ###   ########.fr       */
+/*   Updated: 2025/02/25 15:02:32 by rafaefer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ pid_t	fork_r(void);
 void	*malloc_r(size_t size);
 void	*realloc_r(void *ptr, size_t size);
 pid_t	wait_r(int *status);
+void	ft_freearray(char **str);
 
 #endif
